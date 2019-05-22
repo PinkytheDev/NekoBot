@@ -216,7 +216,7 @@ class NekoBot(commands.AutoShardedBot):
         await super().close()
 
     def run(self, token: str = config.token):
-        super().run(token)
+        super().run("token")
 
     async def on_command_error(self, ctx, exception):
         error = getattr(exception, "original", exception)
